@@ -28,47 +28,14 @@ touch C3
 git add C3
 git commit -m "C3"
 
-git checkout master
-
 touch C4
 git add C4
 git commit -m "C4"
 
-git checkout experiment
-
-git rebase master  
 git checkout master
-git merge experiment
+
+git rebase experiment  
 
 git branch -d experiment
 
 git log --graph --decorate --oneline --all --author-date-order
-
-
-
-
-
-
-
-
-
-:: =========
-:: git checkout HEAD~1
-
-:: git checkout -b experiment
-
-:: touch C4
-:: git add C4
-:: git commit -m "C4"
-
-:: git logall
-
-:: git rebase master  
-:: git checkout master
-:: git merge experiment 
-
-:: git branch -d experiment
-:: git logall
-
-
-
