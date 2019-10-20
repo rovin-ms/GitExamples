@@ -31,32 +31,14 @@ touch C3
 git add C3
 git commit -m "C3"
 
+:: checkout master
+git checkout master
+
 touch C4
 git add C4
 git commit -m "C4"
 
-touch C5
-git add C5
-git commit -m "C5"
-
-touch C6
-git add C6
-git commit -m "C6"
-
-:: checkout master
-git checkout master
-
-touch C7
-git add C7
-git commit -m "C7"
-
-touch C8
-git add C8
-git commit -m "C8"
-
-
 :: MERGE
-git checkout master
 
 git merge topics/branch1
 
