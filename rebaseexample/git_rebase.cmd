@@ -32,10 +32,12 @@ touch C4
 git add C4
 git commit -m "C4"
 
-git checkout master
+git rebase experiment master  
 
-git rebase experiment  
+git checkout master
 
 git branch -d experiment
 
-git log --graph --decorate --oneline --all --author-date-order
+git log --graph --decorate --oneline --all
+
+
