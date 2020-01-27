@@ -9,10 +9,7 @@ git init
 git config --global user.name "Ron Vincent"
 git config --global user.email "rovin@microsoft.com"
 
-git add .gitignore
-git commit -m ".gitignore file"
-
-:: create, stage and commit a new file on master
+:: create, stage and commit new files on master
 touch C0
 git add C0
 git commit -m "C0"
@@ -29,7 +26,12 @@ touch C3
 git add C3
 git commit -m "C3"
 
-:: git rebase --interactive <base>
-git rebase -i HEAD~3 master 
+:: stash these changes
+git tag -a v1.0 -m "MVP v1.0"
 
-git log --graph --decorate --oneline --all --author-date-order
+git tag -l v1.0
+
+git log --grep "C1"
+
+::git push --tags
+

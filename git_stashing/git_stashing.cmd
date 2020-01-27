@@ -9,7 +9,7 @@ git init
 git config --global user.name "Ron Vincent"
 git config --global user.email "rovin@microsoft.com"
 
-:: create, stage and commit a new file on master
+:: create, stage and commit new files on master
 touch C0
 git add C0
 git commit -m "C0"
@@ -29,19 +29,22 @@ git checkout topics/branch1
 
 touch C3
 git add C3
-git commit -m "C3"
 
-:: checkout master
+:: stash these changes
+git stash
+
+git stash list
+
 git checkout master
 
-touch C4
-git add C4
-git commit -m "C4"
+git status
 
-:: 3 way MERGE
+git checkout topics/branch1
 
-git merge topics/branch1
+:: apply the stash
+git stash apply
 
-git branch -d topics/branch1
+:: git stash pop
 
-git log --graph --decorate --oneline --all --author-date-order
+:: git stash <branch>
+

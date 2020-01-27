@@ -32,8 +32,6 @@ echo "C3 Added" > C3
 git add C3
 git commit -m "C3 Added"
 
-
-
 touch C4
 git add C4
 git commit -m "C4"
@@ -77,7 +75,7 @@ git status
 notepad C3
 
 git status
-git add C3 C4 C5 C6
+git add C3 
 git commit -m "C3 merge resolved"
 git status
 
