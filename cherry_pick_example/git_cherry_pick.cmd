@@ -48,16 +48,12 @@ git rev-parse HEAD > curr_com.txt
 set /p curr_com=<curr_com.txt
 echo %curr_com%
 
-touch C7
-git add C7
-git commit -m "C7"
-
 
 git checkout master
 
-touch C8
-git add C8
-git commit -m "C8"
+touch C7
+git add C7
+git commit -m "C7"
 
 git log --graph --decorate --oneline --all --author-date-order
 
@@ -65,3 +61,6 @@ git log --graph --decorate --oneline --all --author-date-order
 git cherry-pick %curr_com%
 
 del curr_com.txt
+
+git merge feature
+
