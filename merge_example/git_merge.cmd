@@ -34,9 +34,6 @@ git commit -m "C3"
 :: checkout master
 git checkout master
 
-touch C4
-git add C4
-git commit -m "C4"
 
 :: 3 way MERGE
 
